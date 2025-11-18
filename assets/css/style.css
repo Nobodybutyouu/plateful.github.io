@@ -1,0 +1,150 @@
+:root {
+    --primary: #ff5a3d;
+    --primary-dark: #e04e33;
+    --secondary: #214252;
+    --light: #f8f9fa;
+    --dark: #20262e;
+    --body-font: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--light);
+    color: var(--dark);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(255, 90, 61, 0.9), rgba(33, 66, 82, 0.85)), url('../images/hero.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 6rem 0;
+    position: relative;
+}
+
+.hero-section .badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-section .btn-primary {
+    background-color: #fff;
+    color: var(--primary-dark);
+    border: none;
+}
+
+.hero-section .btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    color: #fff;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.icon-circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 90, 61, 0.1);
+    color: var(--primary);
+}
+
+.feature-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 1rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1.5rem 3rem rgba(33, 66, 82, 0.12);
+}
+
+.role-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 1rem 3rem rgba(33, 66, 82, 0.07);
+}
+
+.timeline-step {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    left: 0.9rem;
+    top: 0.4rem;
+    bottom: -1.6rem;
+    width: 2px;
+    background: rgba(33, 66, 82, 0.15);
+}
+
+.timeline-step:last-child::before {
+    display: none;
+}
+
+.timeline-step::after {
+    content: attr(data-step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    border-top: 1px solid rgba(33, 66, 82, 0.1);
+    background: #fff;
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 4rem 0;
+    }
+
+    .role-card {
+        padding: 1.5rem;
+    }
+}
